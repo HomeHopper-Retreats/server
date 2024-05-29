@@ -2,9 +2,9 @@ const router = require("express").Router();
 const Reservation = require("../models/Reservation.model");
 
 router.get("/reservations/:reservationId", (req, res, next) => {
-  const reservationId = req.params.id;
+  const {reservationId} = req.params;
 
-  Reservation.find({ reservationId })
+  Reservation.findById(reservationId)
     .then((reservation) => {
       //   console.log("Retrieved Reservation ID ->", reservationId);
       res.status(200).json(reservation);

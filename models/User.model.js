@@ -22,10 +22,10 @@ const userSchema = new Schema(
       required: [true, "Lastname is required."],
     },
     role: {
-        type: String,
-        default: "",
-        enum: ["standard", "admin"],
-        required: [true, "Role is required."]
+      type: String,
+      default: "standard",
+      enum: ["standard", "admin"],
+      required: [true, "Role is required."],
     },
   },
   {
