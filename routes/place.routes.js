@@ -45,7 +45,7 @@ router.post("/places", (req, res, next) => {
     });
 });
 
-app.put("/places/:placeId", (req, res, next) => {
+router.put("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
 
   const newDetails = req.body;
@@ -61,7 +61,7 @@ app.put("/places/:placeId", (req, res, next) => {
     });
 });
 
-app.delete("/places/:placeId", (req, res, next) => {
+router.delete("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
 
   Place.findByIdAndDelete(placeId)

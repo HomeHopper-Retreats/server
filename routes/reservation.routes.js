@@ -44,7 +44,7 @@ router.post("/reservations", (req, res, next) => {
     });
 });
 
-app.put("/reservations/:reservationId", (req, res, next) => {
+router.put("/reservations/:reservationId", (req, res, next) => {
   const { reservationId } = req.params;
 
   const newDetails = req.body;
@@ -60,7 +60,7 @@ app.put("/reservations/:reservationId", (req, res, next) => {
     });
 });
 
-app.delete("/reservations/:reservationId", (req, res, next) => {
+router.delete("/reservations/:reservationId", (req, res, next) => {
   const { reservationId } = req.params;
 
   Reservation.findByIdAndDelete(reservationId)
