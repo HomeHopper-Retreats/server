@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const placeSchema = new Schema(
@@ -9,7 +9,6 @@ const placeSchema = new Schema(
     },
     image: {
       type: [String],
-      required: [true, "URL is required."],
     },
     description: {
       type: String,

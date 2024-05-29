@@ -2,9 +2,9 @@ const router = require("express").Router();
 const Place = require("../models/Place.model");
 
 router.get("/places/:placeId", (req, res, next) => {
-  const placeId = req.params.id;
+  const { placeId } = req.params;
 
-  Place.find({ placeId })
+  Place.findById(placeId)
     .then((places) => {
       console.log("Retrieved Place ID ->", placeId);
       res.status(200).json(places);
@@ -30,10 +30,12 @@ router.get("/places", (req, res, next) => {
 router.post("/places", (req, res, next) => {
   Place.create({
     name: req.body.name,
-    description: req.body.description,
-    location: req.body.location,
-    rating: req.body.rating,
     image: req.body.image,
+    description: req.body.description,
+    petsAllowed: req.body.petsAllowed,
+    handicapAccessible: req.body.handicapAccessible,
+    address: req.body.address,
+    location: req.body.location,
   })
     .then((place) => {
       console.log("Created Place ->", place);
