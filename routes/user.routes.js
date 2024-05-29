@@ -15,22 +15,4 @@ router.get("/users/:id", (req, res, next) => {
     });
 });
 
-// router.post("/users", (req, res, next) => {
-//   User.create({
-//     firstName: req.body.firstName,
-//     lastName: req.body.lastName,
-//     email: req.body.email,
-//     role: req.body.role,
-//     password: req.body.password,
-//   })
-//     .then((reservation) => {
-//       //   console.log("Created Reservation ->", place);
-//       res.status(200).json(reservation);
-//     })
-//     .catch((error) => {
-//       console.error("Error while retrieving reservations ->", error);
-//       next(error);
-//     });
-// });
-
 module.exports = router;
