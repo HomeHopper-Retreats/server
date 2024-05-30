@@ -34,6 +34,10 @@ router.post("/places", (req, res, next) => {
     description: req.body.description,
     petsAllowed: req.body.petsAllowed,
     handicapAccessible: req.body.handicapAccessible,
+    kitchenAvailable: req.body.kitchenAvailable,
+    elevatorAvailable: req.body.elevatorAvailable,
+    poolAvailable: req.body.poolAvailable,
+    isLuxurious: req.body.isLuxurious,
     address: req.body.address,
     location: req.body.location,
   })

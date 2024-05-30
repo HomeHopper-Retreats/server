@@ -22,13 +22,29 @@ const placeSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    kitchenAvailable: {
+      type: Boolean,
+      default: false,
+    },
+    elevatorAvailable: {
+      type: Boolean,
+      default: false,
+    },
+    poolAvailable: {
+      type: Boolean,
+      default: false,
+    },
+    isLuxurious: {
+      type: Boolean,
+      default: false,
+    },
     address: {
       type: String,
       required: [true, "Address is required."],
     },
     location: {
       type: {
-        type: String, // Don't do `{ location: { type: String } }`
+        type: String, 
         enum: ["Point"], // 'location.type' must be 'Point'
         required: true,
       },
