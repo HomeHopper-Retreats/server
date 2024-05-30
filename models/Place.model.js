@@ -46,11 +46,11 @@ const placeSchema = new Schema(
       type: {
         type: String, 
         enum: ["Point"], // 'location.type' must be 'Point'
-        required: true,
+        required: false, //Should be true
       },
       coordinates: {
         type: [Number],
-        required: true,
+        required: false, //Should be true
       },
     },
   },

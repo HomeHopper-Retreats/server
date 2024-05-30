@@ -18,7 +18,6 @@ router.get("/places/:placeId", (req, res, next) => {
 router.get("/places", (req, res, next) => {
   Place.find()
     .then((places) => {
-      console.log("Retrieved Places ->", places);
       res.status(200).json(places);
     })
     .catch((error) => {
