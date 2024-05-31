@@ -33,6 +33,7 @@ router.post("/reservations", (req, res, next) => {
     date: req.body.date,
     description: req.body.description,
     place: req.body.place,
+    user: req.body.user
   })
     .then((reservation) => {
       //   console.log("Created Reservation ->", place);
