@@ -31,7 +31,7 @@ router.post("/reservations", (req, res, next) => {
   Reservation.create({
     name: req.body.name,
     date: req.body.date,
-    description: req.body.description,
+    guests: req.body.guests,
     place: req.body.place,
     user: req.body.user
   })
