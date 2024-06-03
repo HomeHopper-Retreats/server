@@ -38,7 +38,7 @@ router.post("/places", (req, res, next) => {
     poolAvailable: req.body.poolAvailable,
     isLuxurious: req.body.isLuxurious,
     address: req.body.address,
-    location: req.body.location,
+    price: req.body.price,
   })
     .then((place) => {
       console.log("Created Place ->", place);

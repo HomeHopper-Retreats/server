@@ -42,16 +42,9 @@ const placeSchema = new Schema(
       type: String,
       required: [true, "Address is required."],
     },
-    location: {
-      type: {
-        type: String, 
-        enum: ["Point"], // 'location.type' must be 'Point'
-        required: false, //Should be true
-      },
-      coordinates: {
-        type: [Number],
-        required: false, //Should be true
-      },
+    price: {
+      type: Number,
+      required: [true, "Price is required."],
     },
   },
   {
