@@ -11,9 +11,9 @@ const reservationSchema = new Schema(
       type: [Date],
       required: [true, "Dates are required."],
     },
-    description: {
-      type: String,
-      required: [true, "Description is required."],
+    guests: {
+      type: Number,
+      default: 1,
     },
     place: {
       type: mongoose.Schema.Types.ObjectId,
