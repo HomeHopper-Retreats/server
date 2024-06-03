@@ -6,7 +6,7 @@ router.get("/users/:id", (req, res, next) => {
 
   User.findById(userId)
     .then((users) => {
-      console.log("Retrieved User ID ->", users);
+      //console.log("Retrieved User ID ->", users);
       res.status(200).json(users);
     })
     .catch((error) => {
