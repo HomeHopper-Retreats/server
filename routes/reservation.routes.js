@@ -7,6 +7,7 @@ router.get("/reservations/:reservationId", (req, res, next) => {
   Reservation.findById(reservationId)
     .then((reservation) => {
       //   console.log("Retrieved Reservation ID ->", reservationId);
+     
       res.status(200).json(reservation);
     })
     .catch((error) => {
@@ -23,6 +24,20 @@ router.get("/reservations", (req, res, next) => {
     })
     .catch((error) => {
       console.error("Error while retrieving reservations ->", error);
+      next(error);
+    });
+});
+
+router.get("/reservations/user/:userId", (req, res, next) => {
+  const userId = req.params.userId;
+
+  // Use the userId to retrieve reservations associated with that user
+  Reservation.find({ user: userId })
+    .then((reservations) => {
+      res.status(200).json(reservations);
+    })
+    .catch((error) => {
+      console.error("Error while retrieving user's reservations ->", error);
       next(error);
     });
 });
