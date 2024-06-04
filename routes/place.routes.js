@@ -6,7 +6,7 @@ router.get("/places/:placeId", (req, res, next) => {
 
   Place.findById(placeId)
     .then((places) => {
-      console.log("Retrieved Place ID ->", placeId);
+      //console.log("Retrieved Place ID ->", placeId);
       res.status(200).json(places);
     })
     .catch((error) => {
@@ -41,7 +41,7 @@ router.post("/places", (req, res, next) => {
     price: req.body.price,
   })
     .then((place) => {
-      console.log("Created Place ->", place);
+      //console.log("Created Place ->", place);
       res.status(200).json(place);
     })
     .catch((error) => {
@@ -57,7 +57,7 @@ router.put("/places/:placeId", (req, res, next) => {
 
   Place.findByIdAndUpdate(placeId, newDetails, { new: true })
     .then((place) => {
-      console.log("Updated place ->", place);
+      //console.log("Updated place ->", place);
       res.status(200).json(place);
     })
     .catch((error) => {
@@ -71,7 +71,7 @@ router.delete("/places/:placeId", (req, res, next) => {
 
   Place.findByIdAndDelete(placeId)
     .then((result) => {
-      console.log("Deleted place ->", result);
+      //console.log("Deleted place ->", result);
       res.status(200).json(result);
     })
     .catch((error) => {
