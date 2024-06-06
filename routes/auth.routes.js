@@ -63,10 +63,10 @@ router.post("/signup", (req, res, next) => {
     .then((createdUser) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
-      const { email, firstName, lastName, _id } = createdUser;
+      const { email, firstName, lastName, role, _id } = createdUser;
 
       // Create a new object that doesn't expose the password
-      const user = { email, firstName, lastName, _id };
+      const user = { email, firstName, lastName, role, _id };
 
       // Send a json response containing the user object
       res.status(201).json({ user: user });
@@ -98,10 +98,10 @@ router.post("/login", (req, res, next) => {
 
       if (passwordCorrect) {
         // Deconstruct the user object to omit the password
-        const { _id, email, firstName, lastName } = foundUser;
+        const { _id, email, firstName, lastName, role } = foundUser;
 
         // Create an object that will be set as the token payload
-        const payload = { _id, email, firstName, lastName };
+        const payload = { _id, email, firstName, lastName, role };
 
         // Create a JSON Web Token and sign it
         const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
