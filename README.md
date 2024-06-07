@@ -30,13 +30,4 @@
 
 - Demo
   - Link to the final project: [homehopper.netlify.app](https://homehopper.netlify.app)
-  - You can also provide the link to adaptable/fly.io, so that anyone can test the API.
-
-<br />
-
-## (Bonus) Provide documentation for your API endpoints
-
-For the backend, you can also document the endpoints that your API implements.
-
-- Note: this takes time and is not an essential requirement (make sure you focus on the code, keep this as a bonus).
-- Example: https://github.com/Ironborn-Ironhack-March-2022/ironborn-project-management-server/blob/main/README.md
+  
