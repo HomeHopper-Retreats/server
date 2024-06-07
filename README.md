@@ -7,10 +7,7 @@
   - It provides the API endpoints for the HomeHopper frontend application.
   - The API is built using Node.js, Express.js, and MongoDB.
   - It handles user authentication, property listing, category filtering and search functionality.
-
-
   - Technologies used are Node.js, Express.js and MongoDB
-
   - THe functionalities of the API are User Creation & Authentication, Property Listing, Search Functionality and Reservations
   - Provide a link to the other repo (ex. "a repository with the backend code can be found here...").
 
@@ -25,7 +22,9 @@
     - `npm install react-icons`
     - `npm install react-responsive-carousel`
   - create a `.env` file and add following variable:
-    - `VITE_GOOGLE_API_KEY=AIzaSyBapC5bIrPygdzF8X4-pIbrSgfmpFSa3B8`
+    - `PORT=5005`
+    - `TOKEN_SECRET=y0uRt0k3N$eCr3T`
+
   - run the backend with `npm run dev`
 
 - Demo
