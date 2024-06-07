@@ -6,7 +6,7 @@
     - The frontend repository is here [homehopper client](https://github.com/HomeHopper-Retreats/client)
   - It provides the API endpoints for the HomeHopper frontend application.
   - The API is built using Node.js, Express.js, and MongoDB.
-  - It handles user authentication, property listing, and search functionality.
+  - It handles user authentication, property listing, category filtering and search functionality.
 
 
   - Technologies used are Node.js, Express.js and MongoDB
